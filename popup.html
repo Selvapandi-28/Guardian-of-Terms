@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToS Red-Flag Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="extension-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-area">
+        <img src="icon48.png" alt="Shield Logo" class="logo">
+        <h1 class="title">ToS Red-Flag Finder</h1>
+      </div>
+      <div class="status-badge" id="status-badge">Ready</div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tab-scan">🔍 Scan Page</button>
+      <button class="tab-btn" id="tab-paste">📋 Paste Text</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Auto Scan View -->
+      <div class="view-panel" id="scan-view">
+        <p class="description">Scan the text of the webpage you are currently viewing for privacy risks.</p>
+        <button class="btn btn-primary" id="btn-scan-page">Scan Active Tab</button>
+      </div>
+
+      <!-- Manual Paste View -->
+      <div class="view-panel hidden" id="paste-view">
+        <textarea id="tos-input" class="textarea-input" placeholder="Paste Terms of Service / Privacy Policy here..."></textarea>
+        <button class="btn btn-primary" id="btn-scan-paste">Analyze Text</button>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div class="loading-area hidden" id="loading-area">
+        <div class="spinner"></div>
+        <p>Analyzing document...</p>
+      </div>
+
+      <!-- Results View -->
+      <div class="results-area hidden" id="results-area">
+        <div class="divider"></div>
+        
+        <!-- Score Card -->
+        <div class="score-card">
+          <div class="grade-circle" id="grade-circle">A</div>
+          <div class="score-meta">
+            <h2 id="grade-label">Very Safe</h2>
+            <p id="grade-desc">No privacy red flags were detected.</p>
+          </div>
+        </div>
+
+        <!-- Metric Grid -->
+        <div class="metrics-grid">
+          <div class="metric-box box-high">
+            <span class="metric-count" id="count-high">0</span>
+            <span class="metric-label">High Risk</span>
+          </div>
+          <div class="metric-box box-medium">
+            <span class="metric-count" id="count-medium">0</span>
+            <span class="metric-label">Medium Risk</span>
+          </div>
+          <div class="metric-box box-total">
+            <span class="metric-count" id="count-total">0</span>
+            <span class="metric-label">Total Flags</span>
+          </div>
+        </div>
+
+        <!-- Detailed Accordion -->
+        <h3 class="section-title">🔍 Identified Red Flags</h3>
+        <div class="accordion">
+          
+          <!-- Category 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" data-target="cat-sharing">
+              <span>📁 Data Sharing & Sale</span>
+              <span class="badge" id="badge-sharing">0</span>
+            </button>
+            <div class="accordion-content" id="cat-sharing">
+              <div class="empty-message">No clauses flagged.</div>
+              <div class="clause-list"></div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" data-target="cat-tracking">
+              <span>📁 Surveillance & Tracking</span>
+              <span class="badge" id="badge-tracking">0</span>
+            </button>
+            <div class="accordion-content" id="cat-tracking">
+              <div class="empty-message">No clauses flagged.</div>
+              <div class="clause-list"></div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" data-target="cat-rights">
+              <span>📁 Account Rights & Waivers</span>
+              <span class="badge" id="badge-rights">0</span>
+            </button>
+            <div class="accordion-content" id="cat-rights">
+              <div class="empty-message">No clauses flagged.</div>
+              <div class="clause-list"></div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" data-target="cat-retention">
+              <span>📁 Retention & Deletion</span>
+              <span class="badge" id="badge-retention">0</span>
+            </button>
+            <div class="accordion-content" id="cat-retention">
+              <div class="empty-message">No clauses flagged.</div>
+              <div class="clause-list"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Export -->
+        <button class="btn btn-secondary" id="btn-export-report" style="margin-top: 15px;">💾 Save Audit Report</button>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
