@@ -1,8 +1,8 @@
-# ToS Red-Flag Finder - Chrome Extension 🛡️
+# ToS Red-Flag Finder - Chrome Extension 
 
 A Chrome browser extension built on Manifest V3 that allows users to instantly scan any webpage's Terms of Service or Privacy Policy for sneaky clauses, location tracking, and legal waivers with a single click.
 
-## 🌟 Key Features
+##  Key Features
 - **One-Click Page Scanner**: Automatically extracts the text body of the active browser tab using standard scripting and audits it instantly.
 - **Manual Paste Fallback**: Interactive textarea where users can paste legal text manually for private scanning.
 - **Four Risk Categories**: Classifies clauses into:
@@ -16,7 +16,7 @@ A Chrome browser extension built on Manifest V3 that allows users to instantly s
 
 ---
 
-## 🛠️ Tech Stack & Structure
+##  Tech Stack & Structure
 - **Extension API**: Google Chrome Extension APIs (Manifest V3)
 - **Permissions**:
   - `activeTab`: Grants access to the active webpage when requested.
@@ -26,7 +26,7 @@ A Chrome browser extension built on Manifest V3 that allows users to instantly s
 
 ---
 
-## 🚀 Loading the Extension into Google Chrome
+##  Loading the Extension into Google Chrome
 
 To run this extension locally on your browser:
 
@@ -41,12 +41,12 @@ To run this extension locally on your browser:
 
 ---
 
-## 🔍 How to Test
+##  How to Test
 1. **Auto-Scan on Webpages**: Navigate to any Terms of Service document (e.g., [https://zoom.us/terms](https://zoom.us/terms)). Click the extension icon and select **Scan Active Tab**.
 2. **Manual Paste**: Open the extension popup, switch to the **Paste Text** tab, copy-paste any agreement, and click **Analyze Text**.
 3. **Save Report**: Click **Save Audit Report** to download the clean text report of the scan results.
 
 ---
 
-## 💬 Recruiter Talking Points
+##  Recruiter Talking Points
 > "I designed this Chrome extension using Manifest V3 to give users an immediate visual audit of webpage terms. By leveraging the Chrome Scripting API, the extension extracts text on the fly, cleans it, and executes a custom JavaScript pattern-matching engine that categorizes risk levels. Since it relies entirely on native HTML/CSS/JS without heavy frameworks, it remains highly responsive, offline-ready, and lightweight—respecting the user's browser performance while protecting their digital privacy."
