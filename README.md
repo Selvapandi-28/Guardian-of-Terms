@@ -33,10 +33,7 @@ To run this extension locally on your browser:
 1. **Open Google Chrome** and navigate to `chrome://extensions/`.
 2. Enable **Developer mode** by toggling the switch in the top-right corner of the page.
 3. Click the **Load unpacked** button in the top-left corner.
-4. Select the project directory:
-   ```
-   C:\Users\IT\.gemini\antigravity\scratch\tos-redflag-finder-extension
-   ```
+4. Select the project directory.
 5. The **ToS Red-Flag Finder** will now appear in your extensions list! Pin it to your toolbar for easy access.
 
 ---
